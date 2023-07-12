@@ -1,0 +1,37 @@
+Z:\4. ГК\Python321\20230712_Python_strings>git remote add origin git@github.com:doublewera/python321.git
+
+Z:\4. ГК\Python321\20230712_Python_strings>git remote -v
+origin  git@github.com:doublewera/python321.git (fetch)
+origin  git@github.com:doublewera/python321.git (push)
+
+Z:\4. ГК\Python321\20230712_Python_strings>git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+Z:\4. ГК\Python321\20230712_Python_strings>git push --set-upstream origin master
+The authenticity of host 'github.com (140.82.121.3)' can't be established.
+ED25519 key fingerprint is SHA256:+DiYbububububububuCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Enumerating objects: 24, done.
+Counting objects: 100% (24/24), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (22/22), done.
+Writing objects: 100% (24/24), 4.35 KiB | 139.00 KiB/s, done.
+Total 24 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), done.
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/doublewera/python321/pull/new/master
+remote:
+To github.com:doublewera/python321.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+Z:\4. ГК\Python321\20230712_Python_strings>
