@@ -11,19 +11,18 @@ left_col = 15
 
 # Двойная подстановка!
 
+summa = 0
 print('+' + '-' * left_col + '+' + '-' * left_col + '+')
+for tovar in goods:  # Питон перебирает словарь по ключу
+    print('|%(name)15s' % {'name': tovar} + '|', end='')
+    print('%(price)15i' % {'price': goods[tovar]} + '|')
+    print('+' + '-' * left_col + '+' + '-' * left_col + '+')
+    summa += goods[tovar]
 
-print('|%(name)15s' % {'name': 'лук'} + '|', end='')
-print('%(price)15i' % {
-    'price': goods['лук']
-    } + '|')
 
-print('+' + '-' * left_col + '+' + '-' * left_col + '+')
-print('|' + 'морковка' + '|')
-print('+' + '-' * left_col + '+' + '-' * left_col + '+')
-print('|' + 'гречка' + '|')
-print('+' + '-' * left_col + '+' + '-' * left_col + '+')
+
+
 print('| Итог     |' + str(
-     goods['лук'] +  goods['гречка'] +  goods['морковка']
+     summa
     ) + '|')
 print('+' + '-' * left_col + '+' + '-' * left_col + '+')
