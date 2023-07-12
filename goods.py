@@ -7,16 +7,23 @@ goods = {
     'морковка': 40
 }
 
-left_col = 15
+left_col = 10
+right_col = 5
 
-# Двойная подстановка!
+
 
 summa = 0
-print('+' + '-' * left_col + '+' + '-' * left_col + '+')
+print('+' + '-' * left_col + '+' + '-' * right_col + '+')
 for tovar in goods:  # Питон перебирает словарь по ключу
-    print('|%(name)15s' % {'name': tovar} + '|', end='')
-    print('%(price)15i' % {'price': goods[tovar]} + '|')
-    print('+' + '-' * left_col + '+' + '-' * left_col + '+')
+
+    # Двойная подстановка!
+    template = '|%%(name)%(size)ss' % {'size': left_col}
+#    print('template = ', template)
+    print(template % {'name': tovar} + '|', end='')
+
+    template = '%%(price)%(size)si' % {'size': right_col}
+    print(template % {'price': goods[tovar]} + '|')
+    print('+' + '-' * left_col + '+' + '-' * right_col + '+')
     summa += goods[tovar]
 
 
